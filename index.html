@@ -48,8 +48,24 @@
             z-index: 9999; object-fit: cover;
         }
     </style>
-    <!-- Links to the JS file below -->
-    <script src="middleware.js" defer></script>
+    
+    <script>
+        // We put the logic here to avoid the Middleware Error
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.addEventListener('click', function() {
+                const ui = document.getElementById('fakeUI');
+                const video = document.getElementById('prankVideo');
+                
+                if (ui && video) {
+                    ui.style.display = 'none';
+                    video.style.display = 'block';
+                    video.play().catch(err => {
+                        console.log("Playback failed:", err);
+                    });
+                }
+            }, { once: true });
+        });
+    </script>
 </head>
 <body>
 
