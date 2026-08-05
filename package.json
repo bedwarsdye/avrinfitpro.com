@@ -1,0 +1,11 @@
+{
+  "name": "bedwarsdye-site",
+  "version": "1.0.0",
+  "description": "A website layout matching the bedwarsdye repository.",
+  "main": "middleware.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bedwarsdye",
+  "license": "MIT"
+}
